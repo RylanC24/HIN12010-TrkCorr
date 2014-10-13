@@ -8,7 +8,7 @@ process.load('HeavyIonsAnalysis.Configuration.collisionEventSelection_cff')
 process.load('Configuration.StandardSequences.GeometryDB_cff')
 process.load('Configuration.StandardSequences.MagneticField_38T_cff')
 process.load('Configuration.StandardSequences.ReconstructionHeavyIons_cff')
-process.load('Appeltel.RpPbAnalysis.RpPbTrackingAnalyzer_cff')
+process.load('Appeltel.HIN12010_TrkCorr.RpPbTrackingAnalyzer_cff')
 
 process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(-1)

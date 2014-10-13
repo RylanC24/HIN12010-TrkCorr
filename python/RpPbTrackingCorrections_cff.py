@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 
-import Appeltel.RpPbAnalysis.RpPbTrackingCorrections_cfi
+import Appeltel.HIN12010_TrkCorr.RpPbTrackingCorrections_cfi
 
 trkCorr_HIN12017 = Appeltel.RpPbAnalysis.RpPbTrackingCorrections_cfi.pPbTrkCorr.clone(
     vertexSrc = cms.InputTag("offlinePrimaryVertices"),

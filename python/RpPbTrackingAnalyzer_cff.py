@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 
-import Appeltel.RpPbAnalysis.RpPbTrackingAnalyzer_cfi
+import Appeltel.HIN12010_TrkCorr.RpPbTrackingAnalyzer_cfi
 
 trkAna_quality = Appeltel.RpPbAnalysis.RpPbTrackingAnalyzer_cfi.trkAna.clone(
         applyCuts = cms.bool(True)

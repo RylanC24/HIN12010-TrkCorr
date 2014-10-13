@@ -18,7 +18,7 @@
 <use name="CommonTools/UtilAlgos"/>
 <use name="DataFormats/SiStripCluster"/>
 <use name="DataFormats/SiPixelCluster"/>
-<use name="DataFormats/HeavyIonEvent"/>
+<use name="RecoHI/HiCentralityAlgos"/>
 <use name="DataFormats/TrackReco"/>
 <use name="DataFormats/VertexReco"/>
 <use name="DataFormats/HepMCCandidate"/>

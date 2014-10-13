@@ -11,7 +11,7 @@ process.load('Configuration.StandardSequences.ReconstructionHeavyIons_cff')
 process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 #process.load('Configuration.EventContent.EventContentHeavyIons_cff')
-process.load('Appeltel.RpPbAnalysis.RpPbTrackingCorrections_cfi')
+process.load('Appeltel.HIN12010_TrkCorr.RpPbTrackingCorrections_cfi')
 process.load('HeavyIonsAnalysis.Configuration.collisionEventSelection_cff')
 
 process.maxEvents = cms.untracked.PSet(
