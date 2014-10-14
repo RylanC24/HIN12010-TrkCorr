@@ -8,7 +8,6 @@ process.load('Configuration.StandardSequences.MagneticField_38T_cff')
 process.load('Configuration.StandardSequences.ReconstructionHeavyIons_cff')
 process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
-
 process.GlobalTag.globaltag = 'STARTHI53_V27::All'
 #process.GlobalTag.globaltag = 'GR_R_53_LV6::All'
 #process.GlobalTag.globaltag = '???::All'
