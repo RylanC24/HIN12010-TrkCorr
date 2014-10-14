@@ -26,10 +26,11 @@ from HeavyIonsAnalysis.Configuration.CommonFunctions_cff import *
 overrideCentrality(process)
 
 process.HeavyIonGlobalParameters = cms.PSet(
-  centralityVariable = cms.string("HFtowersPlusTrunc"),
-  nonDefaultGlauberModel = cms.string(""),
-  centralitySrc = cms.InputTag("pACentrality")
-#  pPbRunFlip = cms.uint32(99999999)
+  centralityVariable = cms.string("HFtowers"),
+#  nonDefaultGlauberModel = cms.string(""),
+  nonDefaultGlauberModel = cms.string("Hydjet_Drum"),
+  centralitySrc = cms.InputTag("hiCentrality"),
+  pPbRunFlip = cms.untracked.uint32()
   )
 
 process.load("SimTracker.TrackAssociation.trackingParticleRecoTrackAsssociation_cfi")
@@ -52,12 +53,24 @@ process.source = cms.Source("PoolSource",
 #process.hltSingleTrigger = process.hltHighLevel.clone()
 #process.hltSingleTrigger.HLTPaths = ["HLT_PAZeroBiasPixel_SingleTrack_v1"]
 
-process.GlobalTag.globaltag = 'STARTHI53_V25::All'
+#process.GlobalTag.globaltag = 'STARTHI53_V27::All'
+#process.GlobalTag.globaltag = 'GR_R_53_LV6::All'
+process.GlobalTag.globaltag = '???::All'
 
-process.p = cms.Path( 
-                      process.siPixelRecHits *
-                      process.pACentrality *
-                      process.tpRecoAssocGeneralTracks *
-                      process.pPbTrkCorr 
-)
+process.p = cms.Path(
+			siPixelRecHits *
+			process.hltMinBiasHFOrBSC * 
+			process.collisionEventSelection *
+			process.tpRecoAssocGeneralTracks *
+			process.pPbTrkCorr
+)			 
+
+#process.p = cms.Path( 
+#                      process.siPixelRecHits *
+#                      process.hltMinBiasHFOrBSC *
+#		      process.collisionEventSelection *
+#		      process.pACentrality *
+#                      process.tpRecoAssocGeneralTracks *
+#                      process.pPbTrkCorr 
+#)
 
