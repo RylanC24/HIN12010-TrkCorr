@@ -5,7 +5,7 @@ from SimTracker.TrackHistory.TrackClassifier_cff import *
 pPbTrkCorr  = cms.EDAnalyzer('RpPbTrackingCorrections',
     trackClassifier,
     trackSrc = cms.InputTag("hiGeneralTracks"),
-    vertexSrc = cms.InputTag("offlinePrimaryVertices"),
+    vertexSrc = cms.InputTag("hiSelectedVertex"),
     tpEffSrc = cms.InputTag('mergedtruth','MergedTrackTruth'),
     tpFakSrc = cms.InputTag('mergedtruth','MergedTrackTruth'),
     associatorMap = cms.InputTag('tpRecoAssocGeneralTracks'),
