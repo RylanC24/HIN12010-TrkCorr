@@ -2,7 +2,7 @@ import FWCore.ParameterSet.Config as cms
 
 from SimTracker.TrackHistory.TrackClassifier_cff import *
 
-pPbTrkCorr  = cms.EDAnalyzer('RpPbTrackingCorrections',
+PbPbTrkCorr  = cms.EDAnalyzer('RpPbTrackingCorrections',
     trackClassifier,
     trackSrc = cms.InputTag("hiGeneralTracks"),
     vertexSrc = cms.InputTag("hiSelectedVertex"),

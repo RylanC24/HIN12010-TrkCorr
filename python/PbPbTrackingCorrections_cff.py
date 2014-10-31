@@ -2,7 +2,7 @@ import FWCore.ParameterSet.Config as cms
 
 import Appeltel.HIN12010_TrkCorr.PbPbTrackingCorrections_cfi
 
-trkCorr_HIN12017 = Appeltel.RpPbAnalysis.PbPbTrackingCorrections_cfi.pPbTrkCorr.clone(
+trkCorr_HIN12017 = Appeltel.RpPbAnalysis.PbPbTrackingCorrections_cfi.PbPbTrkCorr.clone(
 #    vertexSrc = cms.InputTag("offlinePrimaryVertices"),
     vertexSrc = cms.InputTag("hiSelectedVertex")
     ptBins = cms.vdouble(
