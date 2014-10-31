@@ -16,15 +16,15 @@ process.load('Appeltel.HIN12010_TrkCorr.PbPbTrackingCorrections_cfi')
 process.load('HeavyIonsAnalysis.Configuration.collisionEventSelection_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(100)
+    input = cms.untracked.int32(-1)
 )
 
 process.load('FWCore.MessageService.MessageLogger_cfi')
 process.MessageLogger.cerr.FwkReport.reportEvery = 100
 
 process.TFileService = cms.Service("TFileService",
-#    fileName = cms.string('trackCorrections.root')
-    fileName = cms.string('/net/hisrv0001/home/rconway/HIN_12_010/TrkCorr/CMSSW_5_3_20/src/Appeltel/HIN12010_TrkCorr/test/output/trackCorrections.root')
+    fileName = cms.string('trackCorrections.root')
+#    fileName = cms.string('/net/hisrv0001/home/rconway/HIN_12_010/TrkCorr/CMSSW_5_3_20/src/Appeltel/HIN12010_TrkCorr/test/output/trackCorrections.root')
 )
 
 
@@ -63,7 +63,7 @@ process.p = cms.Path(
 #            process.hltMinBiasHFOrBSC * 
 			process.collisionEventSelection *
 			process.tpRecoAssocGeneralTracks *
-			process.pPbTrkCorr
+			process.PbPbTrkCorr
 )			 
 
 
