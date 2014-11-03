@@ -63,7 +63,7 @@ process.p = cms.Path(
 #            process.hltMinBiasHFOrBSC * 
 			process.collisionEventSelection *
 			process.tpRecoAssocGeneralTracks *
-			process.pPbTrkCorr
+			process.PbPbTrkCorr
 )			 
 
 
